@@ -1,0 +1,26 @@
+{
+  "name": "microclock",
+  "description": "minimal clock",
+  "main": "index.js",
+  "repository": "f-mer/microclock",
+  "license": "MIT",
+  "version": "1.0.0",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "start": "bankai example.js --open",
+    "test": "standard && npm run deps"
+  },
+  "dependencies": {
+    "bel": "^4.6.0",
+    "microcomponent": "^3.1.0"
+  },
+  "devDependencies": {
+    "bankai": "^7.1.1",
+    "dependency-check": "^2.8.0",
+    "standard": "^10.0.2"
+  },
+  "keywords": [
+    "clock",
+    "microcomponent"
+  ]
+}
