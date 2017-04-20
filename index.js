@@ -16,7 +16,7 @@ function clock () {
   return component
 
   function render () {
-    var time = new Date(component.state.time).toLocaleTimeString()
+    var time = new Date(this.state.time).toLocaleTimeString()
 
     return html`
       <span>${time}</span>
@@ -24,9 +24,11 @@ function clock () {
   }
 
   function load () {
-    this.timer = setInterval(function tick () {
-      component.state.time = Date.now()
-      component.emit('render')
+    var _this = this
+
+    component.timer = setInterval(function tick () {
+      _this.state.time = Date.now()
+      _this.emit('render')
     }, 1000)
   }
 
